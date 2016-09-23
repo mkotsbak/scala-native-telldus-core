@@ -1,6 +1,7 @@
 import scalanative.native._
 
-@extern object TelldusCoreFull {
+@link("telldus-core")
+@extern object TelldusCore {
   //void (WINAPI *TDDeviceEvent)(int deviceId, int method, const char *data, int callbackId, void *context);
   type TDDeviceEvent = FunctionPtr5[CInt, CInt, CString, CInt, Ptr[_], Ptr[_]]
 

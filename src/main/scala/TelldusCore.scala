@@ -3,19 +3,19 @@ import scalanative.native._
 @link("telldus-core")
 @extern object TelldusCore {
   //void (WINAPI *TDDeviceEvent)(int deviceId, int method, const char *data, int callbackId, void *context);
-  type TDDeviceEvent = FunctionPtr5[CInt, CInt, CString, CInt, Ptr[_], Ptr[_]]
+  type TDDeviceEvent = FunctionPtr5[CInt, CInt, CString, CInt, Ptr[_], Unit]
 
   // void (WINAPI *TDDeviceChangeEvent)(int deviceId, int changeEvent, int changeType, int callbackId, void *context);
-  type TDDeviceChangeEvent = FunctionPtr5[CInt, CInt, CInt, CInt, Ptr[_], Ptr[_]]
+  type TDDeviceChangeEvent = FunctionPtr5[CInt, CInt, CInt, CInt, Ptr[_], Unit]
 
   // void (WINAPI *TDRawDeviceEvent)(const char *data, int controllerId, int callbackId, void *context);
-  type TDRawDeviceEvent = FunctionPtr4[CString, CInt, CInt, Ptr[_], Ptr[_]]
+  type TDRawDeviceEvent = FunctionPtr4[CString, CInt, CInt, Ptr[_], Unit]
 
   // void (WINAPI *TDSensorEvent)(const char *protocol, const char *model, int id, int dataType, const char *value, int timestamp, int callbackId, void *context);
-  type TDSensorEvent = FunctionPtr8[CString, CString, CInt, CInt, CString, CInt, CInt, Ptr[_], Ptr[_]]
+  type TDSensorEvent = FunctionPtr8[CString, CString, CInt, CInt, CString, CInt, CInt, Ptr[_], Unit]
 
   // void (WINAPI *TDControllerEvent)(int controllerId, int changeEvent, int changeType, const char *newValue, int callbackId, void *context);
-  type TDControllerEvent = FunctionPtr6[CInt, CInt, CInt, CString, CInt, Ptr[_], Ptr[_]]
+  type TDControllerEvent = FunctionPtr6[CInt, CInt, CInt, CString, CInt, Ptr[_], Unit]
 
   def tdInit(): Unit = extern
   def tdClose(): Unit = extern

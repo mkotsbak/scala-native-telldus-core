@@ -1,6 +1,6 @@
 ## Overview
 
-This is a facade/wrapper for Scala Native (http://www.scala-native.org/) for the Telldus Core library for the Tellstick hardware used to control lights etc. and reading sensors: http://telldus.se/
+This is a facade/wrapper for [Scala Native](http://www.scala-native.org/) for the Telldus Core library for the Tellstick hardware used to control lights etc. and reading sensors: http://telldus.se/
 
 ## Installation
 
@@ -10,3 +10,7 @@ This is a facade/wrapper for Scala Native (http://www.scala-native.org/) for the
 ```
 libraryDependencies += "default" %% "scala-native-telldus-core" % "0.1-SNAPSHOT"
 ```
+
+## Example project
+
+There is an [example project](https://github.com/mkotsbak/scala-native-tellstick-example) available

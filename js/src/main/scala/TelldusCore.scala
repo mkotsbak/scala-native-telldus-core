@@ -15,9 +15,6 @@ object TelldusCore extends TelldusCoreInterface {
 @js.native
 @JSName("telldus")
 trait TelldusCoreNative extends js.Object {
-  def tdInit(): Unit = {}
-  def tdClose(): Unit = {}
-
   @JSName("turnOnSync")
   def tdTurnOn(intDeviceId: Int): Int = js.native
 
